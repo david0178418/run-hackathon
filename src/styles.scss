@@ -1,0 +1,99 @@
+@import "./theme.scss";
+
+// http://ionicframework.com/docs/theming/
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/react/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/react/css/normalize.css";
+@import "~@ionic/react/css/structure.css";
+@import "~@ionic/react/css/typography.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/react/css/padding.css";
+// @import "~@ionic/react/css/float-elements.css";
+// @import "~@ionic/react/css/text-alignment.css";
+// @import "~@ionic/react/css/text-transformation.css";
+// @import "~@ionic/react/css/flex-utils.css";
+// @import "~@ionic/react/css/display.css";
+
+:root {
+	--ion-color-money: #4E9455;
+	--ion-color-money-rgb: rgb(78, 148, 85);
+	--ion-color-money-contrast: #ffffff;
+	--ion-color-money-contrast-rgb: 255,255,255;
+	--ion-color-money-shade: #37683b;
+	--ion-color-money-tint: #83b488;
+
+	--ion-color-debt: #C61F0C;
+	--ion-color-debt-rgb: rgb(198, 31, 12);
+	--ion-color-debt-contrast: #ffffff;
+	--ion-color-debt-contrast-rgb: 255,255,255;
+	--ion-color-debt-shade: #8b1608;
+	--ion-color-debt-tint: #d76255;
+}
+
+.ion-color-money {
+	--ion-color-base: var(--ion-color-money);
+	--ion-color-base-rgb: var(--ion-color-money-rgb);
+	--ion-color-contrast: var(--ion-color-money-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-money-contrast-rgb);
+	--ion-color-shade: var(--ion-color-money-shade);
+	--ion-color-tint: var(--ion-color-money-tint);
+}
+
+.ion-color-debt {
+	--ion-color-base: var(--ion-color-debt);
+	--ion-color-base-rgb: var(--ion-color-debt-rgb);
+	--ion-color-contrast: var(--ion-color-debt-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-debt-contrast-rgb);
+	--ion-color-shade: var(--ion-color-debt-shade);
+	--ion-color-tint: var(--ion-color-debt-tint);
+}
+
+html ion-app {
+	&,
+	* {
+		-webkit-user-select: text !important;
+		user-select: text !important;
+	}
+}
+
+:root {
+	--ion-grid-padding: 0;
+}
+
+.ios-only {
+	display: none;
+
+	.ios & {
+		display: initial;
+	}
+}
+
+.md-only {
+	display: none;
+
+	.md & {
+		display: initial;
+	}
+}
+
+ion-list {
+	& > {
+		ion-item-sliding:last-child,
+		ion-item:last-child {
+			margin-bottom: 75px;
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.hide-mobile {
+		display: none;
+	}
+}
